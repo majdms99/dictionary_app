@@ -19,7 +19,7 @@ const Body = () => {
         setErrRes("");
         setErrTitle("");
         setErrdes("");
-        // setAud("");
+        setAud("");
         setLinks(null);
 
         if (result.title && result.message) {
@@ -114,13 +114,15 @@ const Body = () => {
                 {data && data.phonetic}
               </h6>
             </div>
-            {data && (
+            {data && aud !== "" ? (
               <div
                 onClick={runAudio}
                 className="mr-8 w-12 h-12 text-center bg-gray-300 flex justify-center items-center  cursor-pointer rounded-3xl"
               >
                 <BiPlay size={30} className="text-color_primary" />
               </div>
+            ) : (
+              ""
             )}
           </div>
 
