@@ -105,10 +105,12 @@ const Body = () => {
             )}
           </div>
 
-          <div className="flex justify-between items-center mt-5 mb-5">
+          <div className="flex justify-between flex-wrap items-center mt-5 mb-5">
             <div>
-              <h1 className="mt-2 text-[50px]">{data && data.word}</h1>
-              <h6 className="mt-2 text-color_primary">
+              <h1 className="mt-2 text-[40px] sm:text-[50px]">
+                {data && data.word}
+              </h1>
+              <h6 className="mt-2 text-color_primary mb-2">
                 {data && data.phonetic}
               </h6>
             </div>
